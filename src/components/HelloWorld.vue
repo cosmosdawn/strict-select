@@ -23,16 +23,6 @@
         <span>居家</span>
         <span>鞋类</span>
       </div>
-      <div>
-        <swiper :options="myOptions">
-          <swiper-slide>
-            <img src="../static/images/desk.jpg" alt="">
-          </swiper-slide>
-          <swiper-slide>
-            <img src="../static/images/car.jpg" alt="">
-          </swiper-slide>
-        </swiper>
-      </div>
     </div>
   </div>
 </template>
@@ -48,10 +38,6 @@
               loop: true
             }
           }
-      },
-      components: {
-        swiper,
-        swiperSlide
       },
       created () {
           getlists().then(res => {

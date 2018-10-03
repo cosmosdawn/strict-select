@@ -1,26 +1,27 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <Index></Index>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
-
+// import Navigator from './components/navigator.vue'
+import Index from './components/index.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Navigator,
+    Index
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import "./assets/style/reset.less";
+</style>
+
+<style lang="less">
+
 </style>
