@@ -1,20 +1,32 @@
 <template>
   <div class="container">
-    <div class="header">
-      <div class="logo">网易严选</div>
-      <div class="search">
-        <i class="iconfont">&#xe600;</i>
-        <input type="search" placeholder="搜索商品，共16654款好物" class="input">
+      <div class="header">
+        <div class="logo">网易严选</div>
+        <div class="search">
+          <i class="iconfont">&#xe600;</i>
+          <input type="search" placeholder="搜索商品，共16654款好物" class="input">
+        </div>
+      </div>
+      <div class="tabs">
+        <span>推荐</span>
+        <span>居家</span>
+        <span>鞋包配饰</span>
+        <span>服装</span>
+        <span>电器</span>
+      </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://yanxuan.nosdn.127.net/f11c5c3d9d06f063c1d08e332eaba1f8.jpg?imageView&quality=75&thumbnail=750x0" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://yanxuan.nosdn.127.net/bc9378ddad731616aa6a3e232a2917d1.jpg?imageView&quality=75&thumbnail=750x0" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://yanxuan.nosdn.127.net/089fdc9bfdc75ccfbe9c349d0096804b.jpg?imageView&quality=75&thumbnail=750x0" alt="">
+        </div>
       </div>
     </div>
-    <div class="tabs">
-      <span>推荐</span>
-      <span>居家</span>
-      <span>鞋包配饰</span>
-      <span>服装</span>
-      <span>电器</span>
-    </div>
-    <div class="swiper-container"></div>
     <div class="bottom-menu index-margin-bottom">
       <div>
         <i class="iconfont">&#xe910;</i>
@@ -81,6 +93,7 @@
       return {
       }
     }
+    // TODO: SWIPER
   }
 </script>
 <style lang="less" scoped>
@@ -91,47 +104,53 @@
 .container {
   background-color: #f4f4f4;
   height: -webkit-fill-available;
-  .header {
-    background-color: white;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .logo {
-      flex: 0 0 20%;
-    }
-    .search {
-      flex: 0 0 70%;
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-      background-color: #ededed;
-      border-radius: 3px;
+    .header {
+      background-color: white;
+      height: 45px;
       display: flex;
       justify-content: center;
       align-items: center;
-      .iconfont {
-        width: 10%;
+      .logo {
+        flex: 0 0 20%;
       }
-      .input {
-        width: 60%;
+      .search {
+        flex: 0 0 70%;
         text-align: center;
-        height: inherit;
-        outline: none;
+        height: 30px;
+        line-height: 30px;
+        background-color: #ededed;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .iconfont {
+          width: 10%;
+        }
+        .input {
+          width: 60%;
+          text-align: center;
+          height: inherit;
+          outline: none;
+        }
       }
     }
-  }
-  .tabs {
-    background-color: white;
-    padding: 0 20px;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .tabs {
+      background-color: white;
+      padding: 0 20px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   .swiper-container {
     height: 185px;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
+    .swiper-slide {
+      height: inherit;
+      img {
+        height: inherit;
+      }
+    }
   }
   .bottom-menu {
     background-color: white;
